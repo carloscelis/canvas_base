@@ -74,12 +74,12 @@ var Particle = function(args) {
         // opacidad
         this.alpha = Math.random();
         // color
-        this.rgba = "rgba(255, 255, 255," + this.alpha + ")";
+        this.rgba = "rgba(234, 52, 88," + this.alpha + ")";
         // velocidad
         this.velocity = {
             // sacar numeros negativos, la velocidad entre la mitad
-            x: (Math.random() * 2) - 1,
-            y: (Math.random() * 2) - 1
+            x: (Math.random() * 1) - 0.5,
+            y: (Math.random() * 1) - 0.5
         }
         // sacar el radio con la opacidad
         this.radius = args.radius || this.alpha * 2;
@@ -126,8 +126,8 @@ function render() {
 				context.moveTo(a.position.x, a.position.y);
 				context.lineTo(b.position.x, b.position.y);
 				context.stroke();
-				context.lineWidth = 1 - (distance / 20);
-				context.strokeStyle = "white";
+				context.lineWidth = (1 - (distance / 30)) * 1.5;
+				context.strokeStyle = "black";
 				context.closePath();
 			}
 		}
