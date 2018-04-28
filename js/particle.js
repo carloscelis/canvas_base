@@ -126,7 +126,7 @@ function render() {
 				context.moveTo(a.position.x, a.position.y);
 				context.lineTo(b.position.x, b.position.y);
 				context.stroke();
-				context.lineWidth = (1 - (distance / 30)) * 1.5;
+				context.lineWidth = (1 - (distance / 20)) * 1.5;
 				context.strokeStyle = "black";
 				context.closePath();
 			}
