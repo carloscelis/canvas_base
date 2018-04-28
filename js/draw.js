@@ -39,15 +39,15 @@ function render(){
 	context.clearRect(0, 0, maxWidth, maxHeight);
 	// context.fillRect(x,y,width,height);
 	context.fillStyle= "red";
-	context.fillRect(0, 0, 100, 100);
+	context.fillRect(0, 0, 394, 522);
 
 	// indica donde empieza el trazo
 	context.beginPath();
 	// puntos hacia donde se dirije
 	context.moveTo(maxWidth/2, maxHeight/2);
-	context.lineTo(400,500);
-	context.lineTo(300,550);
-	context.lineTo(500,100);
+	context.lineTo(10,512);
+	context.lineTo(10,12);
+	context.lineTo(384,10);
 	context.lineTo(maxWidth/2, maxHeight/2);
 	context.strokeStyle="blue";
 	context.stroke();
@@ -57,7 +57,7 @@ function render(){
 	// iniciar linea
 	context.beginPath();
 	// false es contra manecillas del reloj
-	context.arc(300, 300, 10, Math.PI*2, false);
+	context.arc(197, 256, 184, Math.PI*2, false);
 	context.strokeStyle= "green";
 	context.stroke();
 }
