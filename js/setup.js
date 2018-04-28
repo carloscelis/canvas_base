@@ -14,14 +14,14 @@ function init (){
 	document.body.appendChild(canvas);
 	Setsize();
 	// resize de pantalla
-	window.addEventListener("resize")
+	window.addEventListener("resize",Setsize);
 
 }
 // funcion para cambiar cuando se ajusta la pantalla
 function Setsize(){
 	// delimitar el interior de pantalla
-	maxWidth= window.innerWidth();
-	maxHeight= window.innerHeight();
+	maxWidth= window.innerWidth;
+	maxHeight= window.innerHeight;
 	// el ancho y alto se delimita al max medida de arriba
 	canvas.width=maxWidth;
 	canvas.height=maxHeight;
@@ -29,8 +29,8 @@ function Setsize(){
 // animate: funcion que se manda a llamar y a los metodos de dibujo (60vecesxseg)
 function animate(){
 	// manda a llamarse a si mismo para reproducirse
-	requestAnimationName(animate);
-	time= new Date().getTime()
+	requestAnimationFrame(animate);
+	time= new Date().getTime();
 	render();
 
 }
