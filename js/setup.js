@@ -5,15 +5,26 @@ var time= new Date().getTime();
 
 
 // init: inicializar canvas
-// container, permite tener muchs canvas en elementos mas ordenados, mas general usar en body
 function init (){
-	maxWidth= window.innerWidth();
-	maxHeight= window.innerHeight();
 	canvas= document.createElement("canvas");
 	context= canvas.getContext("2d");
+	// container, permite tener muchos canvas en elementos mas ordenados, mas general usar en body
 	// container.appendChild(canvas);
+	// se manda a llamar canvas desde el body
 	document.body.appendChild(canvas);
+	Setsize();
+	// resize de pantalla
+	window.addEventListener("resize")
 
+}
+// funcion para cambiar cuando se ajusta la pantalla
+function Setsize(){
+	// delimitar el interior de pantalla
+	maxWidth= window.innerWidth();
+	maxHeight= window.innerHeight();
+	// el ancho y alto se delimita al max medida de arriba
+	canvas.width=maxWidth;
+	canvas.height=maxHeight;
 }
 // animate: funcion que se manda a llamar y a los metodos de dibujo (60vecesxseg)
 function animate(){
